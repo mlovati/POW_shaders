@@ -1,0 +1,58 @@
+#############################
+# Example DAYSIM header file
+#############################
+
+project_name         Twoshaders
+project_directory    C:\Users\Marco\Documents\usedaysim\design\
+bin_directory        C:\Daysim\bin\
+tmp_directory        C:\Users\Marco\Documents\usedaysim\design\tmp\
+Template_File        C:\Daysim\template\DefaultTemplate.htm
+
+###################
+# site information
+###################
+
+place                Ottawa Int'l_CAN
+latitude             45.32
+longitude            75.67
+time_zone            75
+site_elevation       114.0
+time_step            60
+wea_data_short_file  trial.wea
+wea_data_short_file_units 1
+lower_direct_threshold    2
+lower_diffuse_threshold   2
+output_units             2
+sensor_file_unit 		 2 2 2 2 2 2 2 2 2
+ground_reflectance       0.5
+#######################
+# building information
+#######################
+material_file         materials.rad
+geometry_file         surf.rad
+radiance_source_files 2, materials.rad, surf.rad
+sensor_file           points.pts
+#viewpoint_file        DaysimExample.vf
+#AdaptiveZoneApplies   0
+#dgp_image_x_size      500
+#dgp_image_y_size      500
+shading                1
+
+#################################
+# Radiance simulation parameters
+#################################
+ab 2
+ad 1500
+as 20
+ar 300
+aa 0.05
+lr 6
+st 0.1500
+sj 1.0000
+lw 0.0040000
+dj 0.0000
+ds 0.200
+dr 2
+dp 512
+
+shading 1 no_blinds result.dc result.ill
