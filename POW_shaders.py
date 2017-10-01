@@ -8,6 +8,8 @@ orientation_w = 0
 n_strings = 3
 import math
 import subprocess
+import os 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 maxmodules = math.floor(height_w / width_m)
 heightlist =[]
 for i in range(1,maxmodules+1):
@@ -161,6 +163,16 @@ def updatefiles():
 						for j in range(0,n_strings+5):
 							header.write("2 ")
 						header.write("\n")
+					elif "project_directory" in lines[i].split(" ")[0]:
+						header.write("project_directory")
+						for j in range(0,lines[i].count(" ")-1):
+							header.write(" ")
+						header.write(dir_path+ "\\" +"\n")
+					elif "tmp_directory" in lines[i].split(" ")[0]:
+						header.write("tmp_directory")
+						for j in range(0,lines[i].count(" ")-1):
+							header.write(" ")
+						header.write(dir_path+"\\tmp\\"+ "\n" )
 					else:
 						header.write(str(lines[i])+"\n")
 		else:
