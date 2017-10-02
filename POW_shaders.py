@@ -233,7 +233,7 @@ def readfitness(height):
 	return PVpow,totpow,gainindex
 
 print(len(heightlist))
-outputt = open("temporary.csv","w")
+outputt = open("output.csv","w")
 updatefiles() #check if you can move it out
 outputt.write("angle	distance	nomodules	PV	PVtot	gain"+"\n")
 for hei in range(0,len(heightlist)):
